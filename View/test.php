@@ -15,16 +15,16 @@ var colour = d3.scaleLinear()
     .domain([-5 , 0 , 5 ])
     .range(["#660000", "#ffff1a", "#00ff00"]);
 //Create a function to fill in all pyramid blocks
-var kleur = ""
+var setColor = ""
 function color() {
     for(var i= 0; i < SVG_paths.length; i++){
 if (numbers[i] == "NULL"){
-    kleur = "lightGray";
+    setColor = "lightGray";
 }else{
-    kleur = colour(numbers[i])
+    setColor = colour(numbers[i])
 }
 
-d3.select(SVG_paths[i]).style("fill", kleur);
+d3.select(SVG_paths[i]).style("fill", setColor);
     }
 }
 function clickF(id) {
