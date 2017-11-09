@@ -1,4 +1,7 @@
-<?php include("../Controller/pyramid.php") ?>
+<?php 
+include("../Controller/pyramid.php"); 
+include '../includes/header.php';     
+?>
 
 <script src="https://d3js.org/d3.v4.js"></script>
 <html>

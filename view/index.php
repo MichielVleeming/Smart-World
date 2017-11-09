@@ -1,6 +1,5 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
         <?php
             include '../includes/header.php';
         ?>

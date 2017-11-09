@@ -7,27 +7,27 @@
 
         <nav class="navbar">
             <ul>
-                <li>Home</li>
+                <li><a href="index.php">Home</a></li>
                 <li>Rapportages
                 <ul class="dropdown">
                     <li>Piramides
                     <ul class="submenu">
-                        <li>Piramide 2016</li>
-                        <li>Piramide 2015</li>
-                        <li>Piramide 2014</li>
+                        <li><a href="monitor.php">Piramide 2016</a></li>
+                        <li><a href="monitor.php">Piramide 2015</a></li>
+                        <li><a href="monitor.php">Piramide 2014</a></li>
                     </ul>
                     </li>
                 <li>Tussenrapportage
                 <ul class="submenu">
-                    <li>iPhone 6/6 Plus</li>
-                    <li>iPhone 6s/6sPlus</li>
-                    <li>iPhone 7/7 Plus</li>
-                    <li>iPhone SE</li>
+                    <li>Test</li>
+                    <li>Test</li>
+                    <li>Test</li>
+                    <li>Test</li>
                 </ul>
                 </li>
-                <li>Windows</li>
-                <li>Blackberry</li>
-                <li>Nokia</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
             </ul>
             </li>
             <li>Analyse
