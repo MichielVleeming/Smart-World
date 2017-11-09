@@ -5,7 +5,11 @@
 
 <h2>Dit is het startscherm voor het prototype <br>
 van de Verkeersveiligheidmonitor.</h2>
-<a href="test.html">test</a>
+<form method="post" action="index.php">
+	<input name="username" type="text" placeholder="Username">
+	<input name="password" type="password" placeholder="Password">
+	<input name="submit" type="submit" value="submit">
+</form>
 
 
 </html>
