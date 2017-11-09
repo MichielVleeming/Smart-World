@@ -1,59 +1,78 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+html,body,h2{
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica,sans-serif;
+}
+.navbar{
+  width:80%;
+  margin: 0 auto;
+  background: blue;
+  color: white;
+  /*text-transform: uppercase;*/
 }
 
-li {
-    float: left;
+nav>ul>li{
+  list-style: none;
+  display: inline-block;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+ul>li:hover {
+  background-color:gray;
 }
 
-li a:hover:not(.active) {
-    background-color: #111;
+ul.dropdown{
+  position: absolute;
+  list-style: none;
+  margin:0;
+  padding:0;
+  width:100%;
+  margin-left: -25px;
+  padding-top: 15px;
+  display:none;
+}
+ul.dropdown>li{
+  text-align: center;
+  padding: 10px;
+  background-color: blue;
+  margin: 1px;
+}
+.navbar li:hover .dropdown{
+  display: inherit;
 }
 
-.active {
-    background-color: #4CAF50;
+ul.dropdown>li:hover {
+  background-color:gray;
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
+ul.submenu{
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width:100%;
+  display: none;
+  padding-left: auto;
+}
+ul.submenu li{
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: blue;
+  margin: 1px;
+}
+ul.submenu>li:hover{
+  background-color: gray;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+ul.dropdown>li:hover ul.submenu{
+  display: inline-block;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
+li{
+  border-radius:5px;
 }
