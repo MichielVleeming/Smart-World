@@ -13,7 +13,6 @@ for ($x = 0; $x < count($set); $x++){
     $numbers[$x] = $set[$x]["Percentage"];
     $SVG_paths[$x] = $set[$x]["Pcodering"];
 }
-echo $numbers[2];
 $sql->close();
 
 ?>
