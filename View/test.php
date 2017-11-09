@@ -1,32 +1,35 @@
+<?php include("../Controller/pyramid.php") ?>
+
 <script src="https://d3js.org/d3.v4.js"></script>
 <html>
 <body>
 </form>
 <body onload="color()">
-    <?php
-// Set array values to use later
-$numbers = array(0, 0.5 , 1 , 1.5 , 0 , -5 , -5 , 1);
-$SVG_paths = array("#L301", "#L101", "#L102" , "#L103", "#L201", "#L206", "#L302", "#R404");
-?>
 <script>
 // Echo the arrays in JSON.parse so that it can be used in Javascript
 numbers = JSON.parse('<?php echo json_encode($numbers);?>');
 SVG_paths = JSON.parse('<?php echo json_encode($SVG_paths);?>');
 
-//Set color ranges from Red to Yellow to Green ( 0 , 1 , 2 )
+//Set color ranges from Red to Yellow to Green ( -5 , 0 , 5 )
 var colour = d3.scaleLinear()
-    .domain([-5 , 0 , 5])
+    .domain([-5 , 0 , 5 ])
     .range(["#660000", "#ffff1a", "#00ff00"]);
 //Create a function to fill in all pyramid blocks
+var setColor = ""
 function color() {
     for(var i= 0; i < SVG_paths.length; i++){
-d3.select(SVG_paths[i]).style("fill", colour(numbers[i]));
+if (numbers[i] == "NULL"){
+    setColor = "lightGray";
+}else{
+    setColor = colour(numbers[i])
+}
+
+d3.select(SVG_paths[i]).style("fill", setColor);
     }
 }
 function clickF(id) {
     window.location.assign('http://google.com/');
 }
-
 
 </script>
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
