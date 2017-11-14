@@ -7,7 +7,7 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="homepage.php">Home</a></li>
                 <li>Rapportages
                 <ul class="dropdown">
                     <li>Piramides
@@ -57,6 +57,7 @@
                 <li>Test</li>
             </ul>
             </li>
+            <li><a href="index.php">Logout</a></li>
             </ul>
         </nav>
     </body>
