@@ -19,7 +19,7 @@
                     </li>
                 <li>Tussenrapportage
                 <ul class="submenu">
-                    <li>Test</li>
+                    <li>Infosheet</li>
                     <li>Test</li>
                     <li>Test</li>
                     <li>Test</li>
