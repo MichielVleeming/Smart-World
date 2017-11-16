@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 body{
   margin-left:0;
@@ -50,10 +51,18 @@ body2{
   border-style: solid;
   padding: 10px;  
 }
+=======
+html,body,h2{
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica,sans-serif;
+}
+>>>>>>> master
 .navbar{
   width:80%;
   margin: 0 auto;
   background: blue;
+<<<<<<< HEAD
   color: black;
   /*text-transform: uppercase;*/
 }
@@ -62,6 +71,12 @@ body2{
   margin-left: -7%;
   margin-top: 5%;
 }
+=======
+  color: white;
+  /*text-transform: uppercase;*/
+}
+
+>>>>>>> master
 nav>ul>li{
   list-style: none;
   display: inline-block;
@@ -69,11 +84,18 @@ nav>ul>li{
   cursor: pointer;
   font-weight: 500;
   position: relative;
+<<<<<<< HEAD
   z-index: 10;
 }
 
 ul>li:hover {
   background-color:#2E2E7A;
+=======
+}
+
+ul>li:hover {
+  background-color:gray;
+>>>>>>> master
 }
 
 ul.dropdown{
@@ -97,7 +119,11 @@ ul.dropdown>li{
 }
 
 ul.dropdown>li:hover {
+<<<<<<< HEAD
   background-color:#2E2E7A;
+=======
+  background-color:gray;
+>>>>>>> master
 }
 
 ul.submenu{
@@ -118,7 +144,11 @@ ul.submenu li{
   margin: 1px;
 }
 ul.submenu>li:hover{
+<<<<<<< HEAD
   background-color: #2E2E7A;
+=======
+  background-color: gray;
+>>>>>>> master
 }
 
 ul.dropdown>li:hover ul.submenu{
