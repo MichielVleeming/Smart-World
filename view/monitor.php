@@ -1,5 +1,5 @@
 <?php 
-include("../Controller/pyramid.php"); 
+include "../Controller/pyramid.php"; 
 include '../includes/header.php';     
 ?>
 

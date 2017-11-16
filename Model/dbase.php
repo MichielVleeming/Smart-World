@@ -7,10 +7,6 @@ $dbname = "verkeersveiligheidmonitor";
 // Create connection
 $sql = new MySQLi($host, $username, $password, $dbname);
 
-
-
-
-
 ?>
 <!--
 <?php
@@ -45,4 +41,4 @@ class MySQLConnection {
         return $result;
     }     
 
-} -->
+}

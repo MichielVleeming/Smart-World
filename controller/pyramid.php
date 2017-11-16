@@ -9,17 +9,12 @@ for ($set = array (); $row = $result->fetch_assoc(); $set[] = $row);
 
 $numbers = array ();
 $SVG_paths = array ();
-<<<<<<< HEAD
+
 $tooltip = array ();
 for ($x = 0; $x < count($set); $x++){
     $numbers[$x] = $set[$x]["Percentage"];
     $SVG_paths[$x] = $set[$x]["Pcodering"];
     $tooltip[$x] = $set[$x]["Tooltip"];
-=======
-for ($x = 0; $x < count($set); $x++){
-    $numbers[$x] = $set[$x]["Percentage"];
-    $SVG_paths[$x] = $set[$x]["Pcodering"];
->>>>>>> master
 }
 $sql->close();
 
