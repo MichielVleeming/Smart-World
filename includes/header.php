@@ -7,19 +7,19 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="homepage.php">Home</a></li>
+                <li><a href="index.php" style="text-decoration:none; color:black;">Home</a></li>
                 <li>Rapportages
                 <ul class="dropdown">
                     <li>Piramides
                     <ul class="submenu">
-                        <li><a href="monitor.php">Piramide 2016</a></li>
-                        <li><a href="monitor.php">Piramide 2015</a></li>
-                        <li><a href="monitor.php">Piramide 2014</a></li>
+                        <li><a href="monitor.php" style="color:black;">Piramide 2016</a></li>
+                        <li><a href="monitor.php" style="color:black;">Piramide 2015</a></li>
+                        <li><a href="monitor.php" style="color:black;">Piramide 2014</a></li>
                     </ul>
                     </li>
                 <li>Tussenrapportage
                 <ul class="submenu">
-                    <li>Infosheet</li>
+                    <li>Test</li>
                     <li>Test</li>
                     <li>Test</li>
                     <li>Test</li>
@@ -30,17 +30,11 @@
                 <li>Test</li>
             </ul>
             </li>
-            <li>Analyse
+            <li>&nbsp;&nbsp;&nbsp;Analyse &nbsp;&nbsp;&nbsp;
             <ul class="dropdown">
-                <li>Test
-                <ul class="submenu">
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>Test</li>
-                </ul>
-                </li>
-                    <li>Test</li>
-                    <li>Test</li>
+                <li><a href="monitor.php" style="color:black;">Auto/bestelauto</a></li>
+                    <li><a href="monitor.php" style="color:black;">Fiets/snorfiets</a></li>
+                    <li><a href="monitor.php" style="color:black;">Bromfietsen</a></li>
                 </ul>
             </li>
             <li>Organisatie
@@ -56,8 +50,8 @@
                 <li>Test</li>
                 <li>Test</li>
             </ul>
+            <li><a href="Login.php">Logout</a></li>
             </li>
-            <li><a href="index.php">Logout</a></li>
             </ul>
         </nav>
     </body>

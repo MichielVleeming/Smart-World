@@ -5,7 +5,7 @@
 
 <h2>Dit is het startscherm voor het prototype <br>
 van de Verkeersveiligheidmonitor.</h2>
-<form method="post" action="homepage.php">
+<form method="post" action="index.php">
 	<input name="username" type="text" placeholder="Username">
 	<input name="password" type="password" placeholder="Password">
 	<input name="submit" type="submit" value="submit">

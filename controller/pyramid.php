@@ -9,7 +9,6 @@ for ($set = array (); $row = $result->fetch_assoc(); $set[] = $row);
 
 $numbers = array ();
 $SVG_paths = array ();
-
 $tooltip = array ();
 for ($x = 0; $x < count($set); $x++){
     $numbers[$x] = $set[$x]["Percentage"];
