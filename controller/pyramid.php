@@ -1,20 +1,14 @@
-<?php
-include("../Model/dbase.php");
-// Set array values to use later
+<?php 
+session_start();
+require_once '../classes/db/querymanager.php';
+
+$q = new QueryManager();
 
 
+echo $q->getPyramid();
 
-$result = $sql->query("SELECT * FROM dataset2015");
-for ($set = array (); $row = $result->fetch_assoc(); $set[] = $row);
-
-$numbers = array ();
-$SVG_paths = array ();
-$tooltip = array ();
-for ($x = 0; $x < count($set); $x++){
-    $numbers[$x] = $set[$x]["Percentage"];
-    $SVG_paths[$x] = $set[$x]["Pcodering"];
-    $tooltip[$x] = $set[$x]["Tooltip"];
-}
-$sql->close();
-
-?>
+for ($x = 0; $x < $set; $x++){
+    	echo $numbers[$x];
+    	echo $SVG_paths[$x] ;
+    	echo $tooltip[$x] ;
+	}

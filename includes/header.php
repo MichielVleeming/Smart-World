@@ -50,7 +50,7 @@
                 <li>Test</li>
                 <li>Test</li>
             </ul>
-            <li><a href="Login.php">Logout</a></li>
+            <li><a href="Login.php" style="color:black;">Logout</a></li>
             </li>
             </ul>
         </nav>
