@@ -1,3 +1,15 @@
+<?php 
+require_once '../classes/db/querymanager.php';
+				
+	$q = new QueryManager();
+
+	echo $q->getQuestions();
+
+?>
+
+
+
+
 
 
 <form method="post" action="controller.php">

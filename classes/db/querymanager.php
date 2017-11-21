@@ -1,5 +1,6 @@
 <?php
 require_once("dbase.php");
+require_once("../classes/model/questionClass.php");
 
 class QueryManager {
 
@@ -36,5 +37,15 @@ class QueryManager {
 	}
 	return $set;
 	}
+
+	public function getQuestions($id,$pcodering,$text){
+	$result = $this->dbconn->query("SELECT * FROM enquete");
+	while($row = $result->fetch_assoc()) {
+			echo '<tr><td><input type="radio" value="' . $row["ID"] . '" name="answer" required/></td>' . '<td>' . $row["text"] . '</td></tr>';
+		}
+		echo '</table>';	
+	}
+
+
 }
 	?>
