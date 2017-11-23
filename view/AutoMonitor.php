@@ -1,9 +1,10 @@
-<?php 
+<?php
+session_start(); 
 include '../includes/include.php';
 require_once '../classes/db/querymanager.php';		
 $q = new QueryManager();
-
-    echo $q->getPyramid();
+$stad = $_SESSION['city'];
+    echo $q->getPyramid($stad);
     $numbers = $_SESSION["numbers"];
     $SVG_paths = $_SESSION["SVG_paths"];
     $tooltip = $_SESSION["tooltip"];

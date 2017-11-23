@@ -4,10 +4,10 @@
 include "../Controller/pyramid.php"; 
 include '../includes/header.php';   
 $y = 0;
-session_start();
 $numbers = $_SESSION["numbers"];
 $SVG_paths = $_SESSION["SVG_paths"];
 $tooltip = $_SESSION["tooltip"];
+
 ?>
 <head>
 <script src="https://d3js.org/d3.v4.js"></script>
