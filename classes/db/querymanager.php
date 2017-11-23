@@ -13,8 +13,8 @@ class QueryManager {
 		$this->dbconn = new MySQLConnection();
 	}
 
-	public function getPyramid(){
-	$result = $this->dbconn->query("SELECT * FROM dataset2015");
+	public function getPyramid($stad){
+	$result = $this->dbconn->query("SELECT * FROM dataset2015$stad");
 	for ($set = array(); $row = $result->fetch_assoc(); $set[] = $row);
 		$numbers = array();
 		$SVG_paths = array();
