@@ -32,7 +32,7 @@
             </li>
             <li>&nbsp;&nbsp;&nbsp;Analyse &nbsp;&nbsp;&nbsp;
             <ul class="dropdown">
-                <li><a href="monitor.php" style="color:black;">Auto/bestelauto</a></li>
+                <li><a href="AutoMonitor.php" style="color:black;">Auto/bestelauto</a></li>
                     <li><a href="monitor.php" style="color:black;">Fiets/snorfiets</a></li>
                     <li><a href="monitor.php" style="color:black;">Bromfietsen</a></li>
                 </ul>
