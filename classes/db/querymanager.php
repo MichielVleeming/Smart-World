@@ -24,6 +24,7 @@ class QueryManager {
     	$SVG_paths[$x] = $set[$x]["Pcodering"];
 	}
 
+	
 	$result = $this->dbconn->query("SELECT * FROM tooltip");
 	for ($set = array(); $row = $result->fetch_assoc(); $set[] = $row);
 		$tooltip = array();
@@ -34,6 +35,75 @@ class QueryManager {
 	$_SESSION["SVG_paths"] = $SVG_paths;
 	$_SESSION["tooltip"] = $tooltip; 
 	}
+
+	public function getbike($stad){
+		$result = $this->dbconn->query("SELECT * FROM dataset2015$stad WHERE id in (50,51,52,53,54)");
+		for ($set = array(); $row = $result->fetch_assoc(); $set[] = $row);
+			$numbers = array();
+			$SVG_paths = array();
+	
+		for ($x = 0; $x < count($set); $x++){
+			$numbers[$x] = $set[$x]["Percentage"];
+			$SVG_paths[$x] = $set[$x]["Pcodering"];
+		}
+	
+		
+		$result = $this->dbconn->query("SELECT * FROM tooltip");
+		for ($set = array(); $row = $result->fetch_assoc(); $set[] = $row);
+			$tooltip = array();
+		for ($x = 0; $x < count($set); $x++){
+			$tooltip[$x] = $set[$x]["Tooltip"];	
+		}
+		$_SESSION["numbers"] = $numbers;
+		$_SESSION["SVG_paths"] = $SVG_paths;
+		$_SESSION["tooltip"] = $tooltip; 
+	}
+
+	public function getcar($stad){
+		$result = $this->dbconn->query("SELECT * FROM dataset2015$stad WHERE id in (4,5,6,7,8)");
+		for ($set = array(); $row = $result->fetch_assoc(); $set[] = $row);
+			$numbers = array();
+			$SVG_paths = array();
+	
+		for ($x = 0; $x < count($set); $x++){
+			$numbers[$x] = $set[$x]["Percentage"];
+			$SVG_paths[$x] = $set[$x]["Pcodering"];
+		}
+	
+		
+		$result = $this->dbconn->query("SELECT * FROM tooltip");
+		for ($set = array(); $row = $result->fetch_assoc(); $set[] = $row);
+			$tooltip = array();
+		for ($x = 0; $x < count($set); $x++){
+			$tooltip[$x] = $set[$x]["Tooltip"];	
+		}
+		$_SESSION["numbers"] = $numbers;
+		$_SESSION["SVG_paths"] = $SVG_paths;
+		$_SESSION["tooltip"] = $tooltip; 
+	}
+
+	public function getModaliteit($stad, $id){
+		$result = $this->dbconn->query("SELECT * FROM dataset2015$stad WHERE id in (".implode(',', $id).")");
+		for ($set = array(); $row = $result->fetch_assoc(); $set[] = $row);
+			$numbers = array();
+			$SVG_paths = array();
+	
+		for ($x = 0; $x < count($set); $x++){
+			$numbers[$x] = $set[$x]["Percentage"];
+			$SVG_paths[$x] = $set[$x]["Pcodering"];
+		}
+		
+		$result = $this->dbconn->query("SELECT * FROM tooltip");
+		for ($set = array(); $row = $result->fetch_assoc(); $set[] = $row);
+			$tooltip = array();
+		for ($x = 0; $x < count($set); $x++){
+			$tooltip[$x] = $set[$x]["Tooltip"];	
+		}
+		$_SESSION["numbers"] = $numbers;
+		$_SESSION["SVG_paths"] = $SVG_paths;
+		$_SESSION["tooltip"] = $tooltip; 
+	}
+			
 
 	public function getQuestions(){
 	$result = $this->dbconn->query("SELECT * FROM enquete");

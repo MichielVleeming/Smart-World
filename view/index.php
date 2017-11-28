@@ -4,7 +4,6 @@
         session_start();
             include '../includes/header.php';
             $stad = $_SESSION['city'];
-            echo $stad;
         ?>
     </head>
 

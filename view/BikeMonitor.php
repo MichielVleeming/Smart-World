@@ -7,8 +7,7 @@ $stad = $_SESSION['city'];
 $id = array();
 $id = [41,42,43,44,45];
     echo $q->getmodaliteit($stad, $id);
-    
-//Get numbers, paths and tooltips for the graphs
+    //Get numbers, paths and tooltips for the graphs
     $numbers = $_SESSION["numbers"];
     $SVG_paths = $_SESSION["SVG_paths"];
     $tooltip = $_SESSION["tooltip"];
@@ -30,10 +29,11 @@ var ctx = document.getElementById('myChart').getContext('2d');
 Chart.defaults.global.hover.mode = 'dataset';
 var myChart = new Chart(ctx, {
   type: 'bar',
+  labels: SVG_paths,
   data: {
     labels: SVG_paths,
     datasets: [{
-      label: "My first",
+        label: "My first",
       data: numbers,
       backgroundColor: "rgba(0,0,255,0.2)"
     }, 
@@ -42,13 +42,12 @@ var myChart = new Chart(ctx, {
   options: {
     title: {
             display: true,
-            text: 'Auto Monitor'
+            text: 'Fiets Monitor'
         }
 
     }
 
 });
-
 var ctx = document.getElementById('myChart2').getContext('2d');
 Chart.defaults.global.hover.mode = 'dataset';
 var myChart = new Chart(ctx, {
@@ -57,7 +56,7 @@ var myChart = new Chart(ctx, {
   data: {
     labels: SVG_paths,
     datasets: [{
-      label: "My first",
+        label: "My first",
       data: numbers,
       backgroundColor: "rgba(0,0,255,0.2)"
     }, 
@@ -66,7 +65,7 @@ var myChart = new Chart(ctx, {
   options: {
     title: {
             display: true,
-            text: 'Auto Monitor'
+            text: 'Fiets Monitor'
         }
 
     }
