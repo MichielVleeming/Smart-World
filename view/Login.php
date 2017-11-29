@@ -3,17 +3,28 @@
 ?>
 
 <html>
-<title>Login</title>
-<img src="http://www.nlingenieurs.nl/wp-content/uploads/2013/03/logo-Royal-HaskoningDHV.jpg"
-     alt="Mountain View" style="width:10%;height:10%;" align="right">
+	<head>
+		<meta charset="UTF-8">
+			<title>Verkeersveiligheidmonitor</title>
+		<link rel="stylesheet" href="css/style.css">
+		<img src="http://www.nlingenieurs.nl/wp-content/uploads/2013/03/logo-Royal-HaskoningDHV.jpg"
+	     alt="Mountain View" style="width:10%;height:10%;" align="right">
+	</head>
 
-<h2>Dit is het startscherm voor het prototype <br>
-van de Verkeersveiligheidmonitor.</h2>
 <form method="get" action="../controller/loginController.php">
-	<input type="text" name="login" >
-	<input type="hidden" value="submitlogin" name="action">
-	<input name="submit" type="submit" value="submit">
-</form>
-
-
+	<body>
+  	<div class="login">
+  	<h2>Log In</h2>
+  		<fieldset>
+    <input type="Gebruikersnaam" placeholder="Gebruikersnaam" />
+  	<input type="Wachtwoord" placeholder="Wachtwoord" />
+  		</fieldset>
+  	<input type="submit" value="Log In" />
+  		<div class="utilities">
+    		<a href="#">Wachtwoord vergeten?</a>
+    		<a href="#">Contact &rarr;</a>
+  	</div>
+		</div>
+   
+</body>
 </html>
