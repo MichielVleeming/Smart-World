@@ -1,15 +1,16 @@
 body{
-  margin-left:0;
-  padding: 0;
   font-family: Helvetica,sans-serif;
+  padding-bottom: 0px;
+  margin-bottom: -40px;
 }
-body2{
+
+.container{
   margin-left:0;
-  position:absolute;
+  position:relative;
   width:50%;
   left:10%;
   right:10%;
-  height:auto; 
+  min-height:100%; 
 }
 .modamenu{
   position: fixed;
@@ -19,18 +20,7 @@ body2{
   border-style: solid;
   margin-right: 10%;
 }
-.footer{
-    background-color: rgba(0, 105, 161, 0.19);
-    color:#ffffff;
-    position: fixed;
-    text-align:center;
-    right: 0;
-    bottom: 0;
-    height: 100px;
-    width: 20%;
-    overflow:hidden;
-    padding: 0 0 20px ;
-}
+
 .dashboard{
   position:relative;
   margin-top:-100px;
@@ -135,3 +125,15 @@ a{
 a:hover, a:focus {
     text-decoration: none;
     color: black; }
+
+.footer{
+    background-color: rgba(0, 105, 161, 0.19);
+    color:#ffffff;
+    position: relative;
+    text-align:center;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
+    list-style-type: none;
+}

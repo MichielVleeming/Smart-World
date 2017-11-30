@@ -13,7 +13,7 @@ $tooltip = $_SESSION["tooltip"];
 <script src="https://d3js.org/d3.v4.js"></script>
 </head>
 
-<body2>
+<div class="container">
 <nav class="pyramid">
 </form>
 <body onload="color()">
@@ -1456,8 +1456,9 @@ function clickF(id) {
  
  
 </nav>
-</body2>
-</html>
+</div>
 <?php 
  include '../includes/footer.php';
 ?>
+</html>
+

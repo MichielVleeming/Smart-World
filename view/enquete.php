@@ -5,11 +5,12 @@ require_once '../classes/db/querymanager.php';
 
 ?>
 <html>
-<body2>
+<div class="container">
 <?php
 $q = new QueryManager();
 
 	echo $q->getQuestions();
 	?>
-</body2>
+</div>
+<?php include '../includes/footer.php'; ?>
 </html>

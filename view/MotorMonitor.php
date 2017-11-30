@@ -1,6 +1,6 @@
 <?php
 session_start(); 
-include '../includes/include.php';
+include '../includes/header.php';
 require_once '../classes/db/querymanager.php';		
 $q = new QueryManager();
 $stad = $_SESSION['city'];
@@ -15,7 +15,7 @@ $id = [41,42,43,44,45];
 ?>
 <html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>		
-<body2>
+<div class="container">
 <canvas id="myChart" width="800" height="450" style="border: 1px solid rgba(0,0,255,0.6);"></canvas>
 </br></br></br></br></br></br></br></br></br>
 <canvas id="myChart2" responsive=True style="border: 1px solid rgba(0,0,255,0.5);"></canvas>
@@ -79,5 +79,7 @@ var myChart = new Chart(ctx, {
     }
 });
 </script>
-</body2>
+
+</div>
+<?php include '../includes/footer.php'; ?>
 </html>
