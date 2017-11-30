@@ -1,5 +1,5 @@
 <?php
-            session_start();
+session_start();
 ?>
 
 <html>
@@ -9,9 +9,10 @@
 
 <h2>Dit is het startscherm voor het prototype <br>
 van de Verkeersveiligheidmonitor.</h2>
-<form method="get" action="../controller/loginController.php">
-	<input type="text" name="login" >
-	<input type="hidden" value="submitlogin" name="action">
+<form method="post" action="../controller/loginController.php">
+	<input type="hidden" value="login" name="action">
+	<input type="text" name="username">
+	<input type="password" name="password">
 	<input name="submit" type="submit" value="submit">
 </form>
 

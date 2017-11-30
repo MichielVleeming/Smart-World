@@ -3,6 +3,7 @@
         <?php
         session_start();
             include '../includes/header.php';
+            include '../includes/sentry.php';
             $stad = $_SESSION['city'];
         ?>
     </head>

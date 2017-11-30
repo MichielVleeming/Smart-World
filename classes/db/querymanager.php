@@ -1,6 +1,7 @@
 <?php
 require_once("dbase.php");
 require_once("../classes/model/questionClass.php");
+require_once("../classes/model/userClass.php");
 class QueryManager {
 	/*
 	* 22-11-2017 Michiel: getQuestions toegevoegd om bla bla
@@ -126,6 +127,15 @@ class QueryManager {
 		$this->dbconn->query("UPDATE dataset2015 SET Percentage=$answer[$x] WHERE Pcodering='$pCodering[$x]'");
 		}
 	}
+
+	/*
+		* 30-11-2017 Bart: Telt de rijen in de database waar de inlog gegevens van kloppen en stuurt dit getal terug
+	*/
+	public function loginUser($username, $password) {
+    	$result = $this->dbconn->query("SELECT * FROM user WHERE username ='$username' AND password = '$password'");
+	 	$row = mysqli_num_rows($result);
+	return $row;
+    }
 
 }
 	?>

@@ -50,7 +50,12 @@
                 <li>Test</li>
                 <li>Test</li>
             </ul>
-            <li><a href="Login.php" style="color:black;">Logout</a></li>
+            <li>
+                <form action="../controller/loginController.php" method="post" style="color:black;">
+                    <input type="hidden" name="action" value="logout">
+                    <input type="submit" name="submit" value="Logout">
+                </form>
+            </li>
             </li>
             </ul>
         </nav>
