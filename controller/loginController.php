@@ -7,7 +7,7 @@ require_once '../classes/model/userClass.php';
 $q = new QueryManager();
 session_start();
 if($_GET['action']=='submitlogin'){
-    $_SESSION['city'] = $_GET['login'];
+    
     header('location:../view/index.php');
 }
 
@@ -19,6 +19,7 @@ if($_GET['action']=='submitlogin'){
 if (isset($_POST['username']) && isset($_POST['password'])&&($_POST['action']=='login')) {
 	$username = $_POST['username']; 
 	$password = $_POST['password'];
+	$_SESSION['city'] = $_POST['username'];
     $login = $q->loginUser($username, $password);
 	$_SESSION['login'] = serialize($login);
 	header('Location: ../view/index.php'); 		
