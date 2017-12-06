@@ -1,5 +1,5 @@
 <?php 
-include '../includes/include.php';
+include '../includes/header.php';
 require_once '../classes/db/querymanager.php';
 session_start();
 $stad = $_SESSION['city'];				
