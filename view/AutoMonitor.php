@@ -6,8 +6,7 @@ $q = new QueryManager();
 $stad = $_SESSION['city'];
 $id = array();
 $id = [41,42,43,44,45];
-    echo $q->getmodaliteit($stad, $id);
-    
+echo $q->getmodaliteit($stad, $id);    
 //Get numbers, paths and tooltips for the graphs
     $numbers = $_SESSION["numbers"];
     $SVG_paths = $_SESSION["SVG_paths"];

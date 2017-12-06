@@ -2,6 +2,8 @@
 require_once("dbase.php");
 require_once("../classes/model/questionClass.php");
 class QueryManager {
+
+
 	/*
 	* 22-11-2017 Michiel: getQuestions toegevoegd om bla bla
 
@@ -105,7 +107,7 @@ class QueryManager {
 	}
 			
 
-	public function getQuestions(){
+	public function getQuestions($stad){
 	$result = $this->dbconn->query("SELECT * FROM enquete");
 	echo '<form method="get" action="../controller/questionController.php">';
 	$x=0;
@@ -113,19 +115,20 @@ class QueryManager {
 			echo '<tr><td><input type="text" value="" name="answer'.$x.'" required/></td></tr>'
 			. '<td>' . $row["text"] . '</td></tr><br><br>';
 			echo '<tr><td><input type="hidden" value='.$row["Pcodering"].' name="id'.$x.'" required/></td></tr>';
+			echo '<tr><td><input type="hidden" value='.$stad.' name="stad"  required/></td></tr>';
 			$x++;
 		}
 		echo '<tr><td><input type="hidden" value="submitanswers" name="action"  required/></td></tr>';
-		echo '<tr><td><input type="hidden" value='.$x.' name="no"  required/></td></tr>';
+		echo '<tr><td><input type="hidden" value='.$x.' name="no"  required/></td></tr>';	
 		echo '<tr><td><input type="submit" value="submit"</td></tr>';
 		echo '</table>';
 		echo '</form>';	
 	}
-	public function saveAnswer($answer, $pCodering , $count){
+
+	public function saveAnswer($answer, $pCodering , $count, $stad){
 		for($x=0;$x<$count;$x++){
-		$this->dbconn->query("UPDATE dataset2015 SET Percentage=$answer[$x] WHERE Pcodering='$pCodering[$x]'");
+		$this->dbconn->query("UPDATE dataset2015$stad SET Percentage=$answer[$x] WHERE Pcodering='$pCodering[$x]'");
 		}
 	}
-
 }
 	?>
