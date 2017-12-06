@@ -12,7 +12,8 @@ if($_GET['action']=='submitanswers'){
     for($x=0; $x<$count;$x++){
         $answer[$x] = $_GET["answer$x"];
         $pCodering[$x] = $_GET["id$x"];
+        $stad = $_GET["stad"];
     }
-    $q->saveAnswer($answer, $pCodering , $count);
+    $q->saveAnswer($answer, $pCodering , $count, $stad);
     header('location:../view/monitor.php');
 }
