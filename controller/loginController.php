@@ -6,11 +6,6 @@ require_once '../classes/model/userClass.php';
 
 $q = new QueryManager();
 session_start();
-if($_GET['action']=='submitlogin'){
-    
-    header('location:../view/index.php');
-}
-
 
 /*
 	* 30-11-2017 Bart: Controleert de gegevens die de gebruiker heeft ingevuld en stuurt ze door naar querymanager.php
@@ -24,7 +19,6 @@ if (isset($_POST['username']) && isset($_POST['password'])&&($_POST['action']=='
 	$_SESSION['login'] = serialize($login);
 	header('Location: ../view/index.php'); 		
 }
-
 
 /*
 	* 30-11-2017 Bart: Kijkt of de gebruiker de logout knop heeft geklikt en beindigt de huidige login sessie 
