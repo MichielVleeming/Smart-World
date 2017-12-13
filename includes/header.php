@@ -51,10 +51,7 @@
                 <li>Test</li>
             </ul>
             <li>
-                <form action="../controller/loginController.php" method="post" style="color:black;">
-                    <input type="hidden" name="action" value="logout">
-                    <input type="submit" name="submit" value="Logout">
-                </form>
+            <a href="../controller/logincontroller.php?action=logout&submit=Logout" style="color:black;">Logout</a>
             </li>
             </li>
             </ul>

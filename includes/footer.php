@@ -5,7 +5,7 @@
 <footer class="footer">
     <ul class="menuleft">
         <h2>Kom in contact</h2>
-        <li><span>Email: RHDHV@hotmail.com</span></li>
+        <li><span>Email: help@RHDHV.com</span></li>
         <li><span>Serversdesk: 036 4857362</span></li>
     </ul>
 

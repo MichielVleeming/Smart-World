@@ -14,7 +14,7 @@ session_start();
 if (isset($_POST['username']) && isset($_POST['password'])&&($_POST['action']=='login')) {
 	$username = $_POST['username']; 
 	$password = $_POST['password'];
-	$_SESSION['city'] = $_POST['username'];
+	$_SESSION['city'] = $_POST['city'];
     $login = $q->loginUser($username, $password);
 	$_SESSION['login'] = serialize($login);
 	header('Location: ../view/index.php'); 		
@@ -23,7 +23,7 @@ if (isset($_POST['username']) && isset($_POST['password'])&&($_POST['action']=='
 /*
 	* 30-11-2017 Bart: Kijkt of de gebruiker de logout knop heeft geklikt en beindigt de huidige login sessie 
 */
-if ($_POST['action']=='logout'){
+if ($_GET['action']=='logout'){
 	session_start();
 	session_destroy();	
     header('Location: ../view/Login.php');
