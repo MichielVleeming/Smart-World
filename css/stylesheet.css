@@ -45,7 +45,12 @@ body{
 .navbar{
   width:80%;
   margin: 0 auto;
-  background: blue;
+  background: #3083ff;
+  border-bottom-left-radius: 20% ;
+  border-bottom-right-radius: 20%;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #def700;
   color: black;
   /*text-transform: uppercase;*/
 }
@@ -65,7 +70,7 @@ nav>ul>li{
 }
 
 nav>ul>li:hover {
-  background-color:#2E2E7A;
+  background-color:#3083ff;
 }
 
 ul.dropdown{
@@ -77,11 +82,12 @@ ul.dropdown{
   margin-left: -25px;
   padding-top: 15px;
   display:none;
+
 }
 ul.dropdown>li{
   text-align: center;
   padding: 10px;
-  background-color: blue;
+  background-color: #3083ff;
   margin: 1px;
 }
 .navbar li:hover .dropdown{
@@ -89,7 +95,7 @@ ul.dropdown>li{
 }
 
 ul.dropdown>li:hover {
-  background-color:#2E2E7A;
+  background-color:#3083ff;
 }
 
 ul.submenu{
@@ -106,11 +112,11 @@ ul.submenu li{
   width: 100%;
   text-align: center;
   padding: 10px;
-  background-color: blue;
+  background-color: #3083ff;
   margin: 1px;
 }
 ul.submenu>li:hover{
-  background-color: #2E2E7A;
+  background-color: #3083ff;
 }
 
 ul.dropdown>li:hover ul.submenu{
@@ -172,7 +178,6 @@ a:hover, a:focus {
   float: right;
   height:50%;
   width:auto;
-  
 }
 
 /**/

@@ -23,7 +23,7 @@ if (isset($_POST['username']) && isset($_POST['password'])&&($_POST['action']=='
 /*
 	* 30-11-2017 Bart: Kijkt of de gebruiker de logout knop heeft geklikt en beindigt de huidige login sessie 
 */
-if ($_GET['action']=='logout'){
+if ($_POST['action']=='logout'){
 	session_start();
 	session_destroy();	
     header('Location: ../view/Login.php');
