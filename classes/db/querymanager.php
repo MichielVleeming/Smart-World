@@ -113,11 +113,39 @@ class QueryManager {
 	echo '<form method="get" action="../controller/questionController.php">';
 	$x=0;
 	while($row = $result->fetch_assoc()) {
-			echo '<tr><td><input type="text" value="" name="answer'.$x.'" required/></td></tr>'
-			. '<td>' . $row["text"] . '</td></tr><br><br>';
+		if ($row["type"] == 'text'){
+			echo '<tr><td>'. $row["text"] . '<br><br><input type='.$row["type"].' value="" name="answer'.$x.'" required/></td></tr></td></tr><br><br>';
 			echo '<tr><td><input type="hidden" value='.$row["Pcodering"].' name="id'.$x.'" required/></td></tr>';
 			echo '<tr><td><input type="hidden" value='.$stad.' name="stad"  required/></td></tr>';
 			$x++;
+		}
+		if ($row["type"] == 'perc'){
+			echo '<tr><td>'. $row["text"] . '<br><br>0&nbsp; &nbsp; <input type="range" list="tickmarks" name="answer'.$x.'" required/></td>&nbsp; &nbsp; 100</tr></td></tr><br><br>';
+			echo '<datalist id="tickmarks">
+			<option value="0">
+			<option value="10">
+			<option value="20">
+			<option value="30">
+			<option value="40">
+			<option value="50">
+			<option value="60">
+			<option value="70">
+			<option value="80">
+			<option value="90">
+			<option value="100">
+		  </datalist>';
+			echo '<tr><td><input type="hidden" value='.$row["Pcodering"].' name="id'.$x.'" required/></td></tr>';
+			echo '<tr><td><input type="hidden" value='.$stad.' name="stad"  required/></td></tr>';
+			$x++;
+		}
+		else if ($row["type"] == 'radio'){
+			echo '<tr><td>'. $row["text"] . '<br><br>
+			<input type='.$row["type"].' value='.$row["value1"].' name="answer'.$x.'" required/>'.$row["value1"].'</td></tr><td></td></tr><br><br>
+			<input type='.$row["type"].' value='.$row["value2"].' name="answer'.$x.'" required/>'.$row["value2"].'</td></tr><td></td></tr><br><br>';
+			echo '<tr><td><input type="hidden" value='.$row["Pcodering"].' name="id'.$x.'" required/></td></tr>';
+			echo '<tr><td><input type="hidden" value='.$stad.' name="stad"  required/></td></tr>';
+			$x++;
+		}
 		}
 		echo '<tr><td><input type="hidden" value="submitanswers" name="action"  required/></td></tr>';
 		echo '<tr><td><input type="hidden" value='.$x.' name="no"  required/></td></tr>';	
@@ -136,9 +164,15 @@ class QueryManager {
 		* 30-11-2017 Bart: Telt de rijen in de database waar de inlog gegevens van kloppen en stuurt dit getal terug
 	*/
 	public function loginUser($username, $password) {
-    	$result = $this->dbconn->query("SELECT * FROM user WHERE username ='$username' AND password = '$password'");
-	 	$row = mysqli_num_rows($result);
-	return $row;
+		$result = $this->dbconn->query("SELECT * FROM user WHERE username ='$username' AND password = '$password'");
+		while($res = $result->fetch_assoc()) {
+			$city = $res['city'];
+		}
+		$row = mysqli_num_rows($result);
+		 $_SESSION["city"] = $city;
+		 return $row;
     }
 }
+
+
 ?>

@@ -5,12 +5,14 @@ class User {
     private $id;
     private $username;
 	private $password;    
-    
-    public function User($id, $username, $password){
+    private $city;
+
+    public function User($id, $username, $password, $city){
     
         $this->id = $id;
         $this->username = $username;
-		$this->password = $password;
+        $this->password = $password;
+        $this->city = $city;
           
     }    
 	public function getId() {
@@ -22,5 +24,8 @@ class User {
     public function getPassword() {
         return $this->password;
     }    
+    public function getCity() {
+        return $this->city;
+    }
 }
 ?>

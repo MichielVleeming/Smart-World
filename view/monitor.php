@@ -1,7 +1,7 @@
 
 <html>
 <?php 
-include "../Controller/pyramid.php"; 
+include "../Controller/pyramidController.php"; 
 include '../includes/header.php';   
 $y = 0;
 $numbers = $_SESSION["numbers"];
@@ -32,6 +32,12 @@ function color() {
     for(var i= 0; i < SVG_paths.length; i++){
 if (numbers[i] == "NULL"){
     setColor = "lightGray";
+}else if (numbers[i] == "Ja"){
+    setColor = "#00ff00";
+}else if (numbers[i] == "Nee"){
+    setColor = "#d80202";
+}else if (numbers[i] == "ND"){
+    setColor = "darkgray";
 }else{
     setColor = colour(numbers[i])
 }
@@ -57,8 +63,8 @@ function clickF(id) {
     xmlns="http://www.w3.org/2000/svg"
     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-    width="130mm"
-    height="145mm"
+    width="200mm"
+    height="180mm"
     viewBox="0 0 210 297"
     version="1.1"
     id="svg178"

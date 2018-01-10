@@ -45,8 +45,13 @@ body{
 .navbar{
   width:80%;
   margin: 0 auto;
-  background: blue;
-  color: black;
+  background: #1C64C9;
+  color: white;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #def700;
+  border-bottom-left-radius: 20% ;
+  border-bottom-right-radius: 20%;
   /*text-transform: uppercase;*/
 }
 .pyramid{
@@ -81,7 +86,7 @@ ul.dropdown{
 ul.dropdown>li{
   text-align: center;
   padding: 10px;
-  background-color: blue;
+  background-color: #1C64C9;
   margin: 1px;
 }
 .navbar li:hover .dropdown{
@@ -106,7 +111,7 @@ ul.submenu li{
   width: 100%;
   text-align: center;
   padding: 10px;
-  background-color: blue;
+  background-color: #1C64C9;
   margin: 1px;
 }
 ul.submenu>li:hover{
@@ -130,7 +135,7 @@ a:hover, a:focus {
     color: black; }
 
 .footer{
-    background-color: #3083ff;
+    background-color: #1C64C9;
     color:white;
     padding-top: 30px;
     padding-left: 30px;
