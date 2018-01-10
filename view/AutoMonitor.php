@@ -41,7 +41,7 @@ var myChart = new Chart(ctx, {
   options: {
     title: {
             display: true,
-            text: 'Auto Monitor'
+            text: 'De eerste grafiek'
         }
 
     }
