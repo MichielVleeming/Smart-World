@@ -6,9 +6,7 @@ $stad = $_SESSION['city'];
 
 ?>
 <html>
-
 <div class="container">
-
 <?php
 $q = new QueryManager();
 

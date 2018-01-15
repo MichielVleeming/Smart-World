@@ -45,7 +45,6 @@ body{
 .navbar{
   width:80%;
   margin: 0 auto;
-<<<<<<< HEAD
   background: #3083ff;
   border-bottom-left-radius: 20% ;
   border-bottom-right-radius: 20%;
@@ -137,7 +136,7 @@ a:hover, a:focus {
     color: black; }
 
 .footer{
-    background-color: #1C64C9;
+    background-color: #3083ff;
     color:white;
     padding-top: 30px;
     padding-left: 30px;
